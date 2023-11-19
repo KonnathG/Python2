@@ -19,16 +19,13 @@ class Atvalto_program(QWidget):
 
         self.kezdo_valuta_label = QLabel("Kezdő valuta:")
         self.cel_valuta_label = QLabel("Cél valuta:")
-        self.atvalto_ertek_label = QLabel("Exchange Rate:")
+        self.atvalto_ertek_label = QLabel("Átváltási érték:")
 
-        # Lista az összes lehetséges valutáról
         osszes_valuta = ["USD", "EUR", "GBP", "JPY", "AUD", "CAD", "CHF", "CNY", "SEK", "NZD",
                          "NOK", "MXN", "SGD", "HKD", "TRY", "INR", "BRL", "ZAR", "RUB", "HUF"]
 
         self.kezdo_valuta_combobox = QComboBox()
         self.cel_valuta_combobox = QComboBox()
-
-        # ABC sorrendbe rendezzük a valutákat
         osszes_valuta.sort()
 
         self.kezdo_valuta_combobox.addItems(osszes_valuta)
@@ -46,12 +43,9 @@ class Atvalto_program(QWidget):
         self.kezdo_valuta_combobox.currentIndexChanged.connect(self.atvalto_ertek_frissites)
         self.cel_valuta_combobox.currentIndexChanged.connect(self.atvalto_ertek_frissites)
 
-        # Frissíti az árfolyamot minden 10 másodpercben
         self.idozito = QTimer(self)
         self.idozito.timeout.connect(self.atvalto_ertek_frissites)
         self.idozito.start(10000)
-
-        # Azonnali frissítés az indításkor
         self.atvalto_ertek_frissites()
 
     def atvalto_ertek_frissites(self):

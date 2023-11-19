@@ -18,7 +18,7 @@ class Atvalto_program(QWidget):
 
         self.kezdo_valuta_label = QLabel("Kezdő valuta:")
         self.cel_valuta_label = QLabel("Cél valuta:")
-        self.atvalto_ertek_label = QLabel("Exchange Rate:")
+        self.atvalto_ertek_label = QLabel("Átváltási érték:")
 
         # Lista az összes lehetséges valutáról
         osszes_valuta = ["USD", "EUR", "GBP", "JPY", "AUD", "CAD", "CHF", "CNY", "SEK", "NZD",
