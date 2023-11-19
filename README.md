@@ -20,6 +20,7 @@ __init__(self): Az alkalmazás inicializálását végző függvény, amely fel�
 atvalto_ertek_frissites(self): Az árfolyamok frissítését és az ablakban történő megjelenítést végző függvény.
 
 Használati útmutató
+Használat előtt telepítsük a PyQt5 és a requests modulokat a Pycharmban levő terminál segítségével a következő paranccsal : pip install PyQt5 requests
 Indítsd el az alkalmazást a Beadando_egyben.py fájl segítségével vagy a külön bontott indítóval ami a Beadando_program.py nevet kapta
 Válaszd ki az alap- és célnemű valutákat a legördülő listákból.
 Figyeld az árfolyamokat és az azonnali átváltást az alkalmazás ablakában.
