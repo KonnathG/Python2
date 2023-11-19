@@ -1,4 +1,5 @@
 Konnáth Gergő Devizaárfolyam-átváltó programja
+
 Ez a projekt egy egyszerű devizaárfolyam-átváltó alkalmazást valósít meg, amely lehetővé teszi a felhasználók számára a valós idejű árfolyamok ellenőrzését és devizaátváltást.
 
 Feladat rövid leírása
